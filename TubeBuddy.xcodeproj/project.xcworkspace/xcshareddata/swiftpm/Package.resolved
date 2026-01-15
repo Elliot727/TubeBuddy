@@ -1,0 +1,15 @@
+{
+  "originHash" : "0acbd4a3cd0859b4cf033b5dfeda00c90c89733d19bc07784274c1e0a78a22d0",
+  "pins" : [
+    {
+      "identity" : "nativekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Elliot727/NativeKit",
+      "state" : {
+        "revision" : "be89469d7650205ee648a86342794d21d70b3798",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

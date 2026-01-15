@@ -39,10 +39,7 @@ struct ArrivalCard: View {
                 .padding(.vertical, 10)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .overlay {
-                Rectangle()
-                    .stroke(.black, lineWidth: 2)
-            }
+
         }
         .background(.white)
         .overlay {

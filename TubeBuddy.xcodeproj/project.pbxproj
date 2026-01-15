@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E1562012F0913C300806747 /* NativeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1562002F0913C300806747 /* NativeKit */; };
+		7E5ED93A2F19311F00C9986D /* NativeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E5ED9392F19311F00C9986D /* NativeKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5ED93A2F19311F00C9986D /* NativeKit in Frameworks */,
 				7E1562012F0913C300806747 /* NativeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +133,7 @@
 			name = TubeBuddy;
 			packageProductDependencies = (
 				7E1562002F0913C300806747 /* NativeKit */,
+				7E5ED9392F19311F00C9986D /* NativeKit */,
 			);
 			productName = TubeBuddy;
 			productReference = 7E1561D52F0911DD00806747 /* TubeBuddy.app */;
@@ -215,7 +218,7 @@
 			mainGroup = 7E1561CC2F0911DD00806747;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				7E1561FF2F0913C300806747 /* XCLocalSwiftPackageReference "../NativeKit" */,
+				7E5ED9382F19311F00C9986D /* XCRemoteSwiftPackageReference "NativeKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7E1561D62F0911DD00806747 /* Products */;
@@ -605,16 +608,25 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		7E1561FF2F0913C300806747 /* XCLocalSwiftPackageReference "../NativeKit" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../NativeKit;
+/* Begin XCRemoteSwiftPackageReference section */
+		7E5ED9382F19311F00C9986D /* XCRemoteSwiftPackageReference "NativeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Elliot727/NativeKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		7E1562002F0913C300806747 /* NativeKit */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = NativeKit;
+		};
+		7E5ED9392F19311F00C9986D /* NativeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E5ED9382F19311F00C9986D /* XCRemoteSwiftPackageReference "NativeKit" */;
 			productName = NativeKit;
 		};
 /* End XCSwiftPackageProductDependency section */

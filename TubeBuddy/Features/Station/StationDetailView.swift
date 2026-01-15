@@ -79,27 +79,7 @@ struct StationDetailView: View {
                 await viewModel.load(for: station.naptanId)
             }
             .sheet(item: $selectedLine) { line in
-                LoadableView(
-                    state: viewModel.state,
-                    isEmpty: { arrivals in
-                        arrivals.filter { $0.lineId == line.id }.isEmpty
-                    },
-                    content: { arrivals in
-                        LazyScrollStack {
-                            ForEach(Array(arrivals.filter({$0.lineId == line.id}).sorted(by: { $0.timeToStation < $1.timeToStation })).enumerated(), id: \.element.compositeId) { index, arrival in
-                                ArrivalCard(arrival: arrival)
-                            }
-                        }
-                        .padding([.top, .horizontal])
-                    },
-                    empty: {
-                        ContentUnavailableView(
-                            "No arrivals found",
-                            systemImage: "magnifyingglass",
-                            description: Text("Try a different line")
-                        )
-                    }
-                )
+                ArrivalsView(line: line, viewModel: viewModel)
             }
 
         }
